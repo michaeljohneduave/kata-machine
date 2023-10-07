@@ -16,6 +16,8 @@ export default class MinHeap {
     }
 
     delete(): number {
+        if (!this.length) return -1;
+
         // move last node to root
         const val = this.arr[0];
         this.arr[0] = this.arr[this.length - 1];
